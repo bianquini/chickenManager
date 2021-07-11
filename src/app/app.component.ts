@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ClientRegistrationComponent } from './modal/client-registration/client-registration.component';
 import { OrderedChickenComponent } from './modal/ordered-chicken/ordered-chicken.component';
-import { ClientModel } from './model/clientModel';
+import { ClientModel } from './model/ClientModel';
 import { PagamentoStatus } from './model/PagamentoStatus';
 
 @Component({

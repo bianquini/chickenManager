@@ -1,10 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ClientModel } from 'src/app/model/clientModel';
-import { PagamentoStatus } from 'src/app/model/PagamentoStatus';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppComponent } from 'src/app/app.component';
+import { ClientModel } from 'src/app/model/ClientModel';
+import { PagamentoStatus } from 'src/app/model/PagamentoStatus';
 
 @Component({
   selector: 'app-client-registration',
