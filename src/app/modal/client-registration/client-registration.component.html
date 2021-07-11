@@ -1,0 +1,35 @@
+<mat-dialog-content class="mat-typography">
+  <h1>Reservar Frango</h1>
+  <form [formGroup]="registrationForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome do Cliente</mat-label>
+      <input matInput placeholder="Nome" formControlName="userName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select [(value)]="client.pagamentoStatus">
+        <mat-option value="PENDENTE">PENDENTE</mat-option>
+        <mat-option value="PAGO">PAGO</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <ngx-timepicker-field
+      [format]="24"
+      [controlOnly]="true"
+      formControlName="retrievalDate"
+    ></ngx-timepicker-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button
+    mat-button
+    [mat-dialog-close]="client"
+    cdkFocusInitial
+    (click)="submit()"
+  >
+    Reservar
+  </button>
+</mat-dialog-actions>
