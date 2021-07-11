@@ -62,7 +62,7 @@ export class AppComponent {
       response = window.confirm("Pagamento Pendente");
     }
 
-    if (response) {
+    if (order?.pagamentoStatus === PagamentoStatus.PAGO || response) {
       const index = this.frangosReservados.indexOf(order)
       this.frangosReservados.splice(index, 1)
       this.frangosVendidos++;
